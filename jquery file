@@ -1,0 +1,18 @@
+<script>
+	jQuery(document).ready(function() {
+		var offset = 220;
+		var duration = 500;
+		jQuery(window).scroll(function() {
+			if (jQuery(this).scrollTop() &gt; offset) {
+				jQuery(&#39;.back-to-top&#39;).fadeIn(duration);
+			} else {
+				jQuery(&#39;.back-to-top&#39;).fadeOut(duration);
+			}
+		});
+		jQuery(&#39;.back-to-top&#39;).click(function(event) {
+			event.preventDefault();
+			jQuery(&#39;html, body&#39;).animate({scrollTop: 0}, duration);
+			return false;
+		})
+	});
+</script>
